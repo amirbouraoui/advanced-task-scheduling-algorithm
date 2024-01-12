@@ -1,7 +1,7 @@
 ![gaze](https://cdn.discordapp.com/attachments/485141053473685504/1092788691551932536/image.png)
 
-# Projet De Synthèse [![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://gitlab.univ-lorraine.fr/bouraoui9u/projet-de-synthese/-/blob/main/README.md)
-> Ce projet implémente un algorithme d'ordonnancement pour un ensemble de tâches à exécuter sur plusieurs machines. L'algorithme d'ordonnancement peut gérer l'ordonnancement non préemptif et préemptif avec un équilibrage facultatif de l'arbre de recherche binaire utilisé pour stocker les tâches.
+# Synthesis Project [![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/amirbouraoui/advanced-task-scheduling-algorithm)
+> This project implements a scheduling algorithm for a set of tasks to be executed on several machines. The scheduling algorithm can handle non-preemptive and preemptive scheduling with an optional balancing of the binary search tree used to store the tasks.
 
 ## Table of Contents
 - [Installation and Documentation](#-installation-and-documentation)
@@ -18,22 +18,21 @@
    - [generate_collection.sh](#generate_collectionsh)
    - [run_experiments.sh](#run_experimentssh)
 - [Compile expe](#compile-expe)
-- [Documentation (in French)](#-documentation-in-french)
-   - [Commandes de compilation](#commandes-de-compilation)
-   - [Commandes de nettoyage](#commandes-de-nettoyage)
-   - [Commandes de débogage](#commandes-de-débogage)
-- [Desciption des options](#desciption-des-options)
-- [Structures du projet](#-structures-du-projet)
-- [Auteurs](#-auteurs)
+- [Documentation](#-documentation)
+   - [Compilation commands](#compile-commands)
+   - [Cleaning controls](#cleaning-controls)
+   - [Debugging commands](#debugging-commands)
+- [Desciption of options](#desciption-of-options)
+- [Project structures](#-project-structures)
 
 
-# 🚀  Installation and Documentation
+# 🚀 Installation and Documentation
 ## ✅ Prerequisites
 - [x] A C compiler (for exemple, [GCC](https://www.gnu.org/software/gcc/))
-- [x] [GNU Make](https://www.gnu.org/software/make/) (préférence sous Linux)
+- [x] [GNU Make](https://www.gnu.org/software/make/) (preferred under Linux)
 - [x] [JavaFX SDK](https://gluonhq.com/products/javafx/) 
 
-## ⏳ Quick  installation setup
+## ⏳ Quick installation setup
 For a fast setup, follow these steps:
 - Replace <path-to-javafx-sdk\> with the actual path to your JavaFX SDK.
 - Replace <os-name\> with your OS name/abbreviation. Accepted values are: **linux**, **mac**, **win**.
@@ -219,107 +218,107 @@ The script `script/expe` can be used to run a series of tests on the scheduling 
 The script will run the algorithm on a series of randomly generated instances and print the results to the file `data/expe.csv`. The script will also print the average execution time of the algorithm to the terminal.
 
 
-## 📚 Documentation (in French)
-### Commandes de compilation
-Commande| Explication
+## 📚 Documentation
+### Compile commands
+Commands| Explaination
 :-----:|:-----:
-`all`|Construit l'exécutable `PROG` (`scheduling`).
-`run`|Construit l'exécutable `PROG` et le lance avec des arguments spécifiés.
-`test`|Construit l'exécutable `TEST` (`runtest`) et le lance.
-`jni`|Construit la bibliothèque d'interface Java `LIB` (`java/libscheduling.so`).
-`expe`|Construit l'exécutable `EXPE` (`script/expe`).
+`all`|Builds the executable `PROG` (`scheduling`).
+`run`|Builds the executable `PROG` and launches it with specified arguments.
+`test`|Builds the executable `TEST` (`runtest`) and launches it.
+`jni`|Builds the Java interface library `LIB` (`java/libscheduling.so`).
+`expe`|Builds the executable `EXPE` (`script/expe`).
 
-### Commandes de nettoyage
-Commande| Explication
+### Cleaning controls
+Commands| Explaination
 :-----:|:-----:
-`cleanall`|Nettoye tous les fichiers (obj, exécutables et les bibliothèques).
-`clean`|Nettoye les fichiers objets dans le répertoire `obj`.
-`delete`|Supprime l'exécutable `PROG`.
-`deletetest`|Supprime l'exécutable `TEST`.
-`deletelib`|Supprime la bibliothèque `LIB`.
-`deleteexpe`|Supprime l'exécutable `EXPE`.
+`cleanall`|Cleans all files (obj, executables, and libraries).
+`clean`|Cleans object files in the `obj` directory.
+`delete`|Deletes the executable `PROG`.
+`deletetest`|Deletes the executable `TEST`.
+`deletelib`|Deletes the library `LIB`.
+`deleteexpe`|Deletes the executable `EXPE`.
 
 
-### Commandes de débogage
-Commande| Explication
+### Debugging commands
+Commands| Explaination
 :-----:|:-----:
-`memorycheck`|Construit `PROG` et lance `valgrind` pour vérifier les erreurs de mémoire.
-`testmemorycheck`|Construit `TEST` et le lance avec `valgrind` pour vérifier les erreurs de mémoire.
+`memorycheck`|Builds `PROG` and launches `valgrind` to check for memory errors.
+`testmemorycheck`|Builds `TEST` and launches it with `valgrind` to check for memory errors.
 
 
-## Desciption des options
-Commande/Option| Description
+## Desciption of options
+Commands/Option| Description
 :-----:|:-----:
-`make run`|Exécutez le programme avec les options spécifiées
-`in=fichierentrée`|Nom du fichier d'entrée
-`out=fichiersortie`|Nom du fichier de sortie
-`m=machines`|Nombre de machines
-`pre=préemption`|Option de préemption
-`bal=équilibré`|Option d'arbre équilibré
+`make run`|Run the program with the specified options
+`in=inputfile`|Name of the input file
+`out=outputfile`|Name of the output file
+`m=machines`|Number of machines
+`pre=preemption`|Preemption option
+`bal=balanced`|Balanced tree option
 
-Options d'arbre équilibré| Description
+Balanced Tree Options| Description
 :-----:|:-----:
-`0`|Utiliser un arbre de recherche binaire
-`1`|Utiliser un arbre de recherche binaire équilibré
+`0`|Use a binary search tree
+`1`|Use a balanced binary search tree
 
-Options de préemption| Description
+Preemption Options| Description
 :-----:|:-----:
-`0`|Sans préemption
-`1`|Avec préemption
+`0`|Without preemption
+`1`|With preemption
 
-## 🛠 Structures du projet
-`struct task_t` Représente une tâche dans le problème d'ordonnancement.
-* `int id` L'identifiant de la tâche.
-* `unsigned long release_time` L'heure de lancement de la tâche (rj).
-* `unsigned long processing_time` Le temps de traitement de la tâche (pj).
+## 🛠 Project structures
+`struct task_t` Represents a task in the scheduling problem.
+* `int id` The task identifier.
+* `unsigned long release_time` The task's release time (rj).
+* `unsigned long processing_time` The task's processing time (pj).
 
-`struct ready_task_key_t` Représente une clé de tâche prête utilisée dans la file d'attente des tâches prêtes (un arbre de recherche binaire).
-* `unsigned long remaining_processing_time` Le temps de traitement restant de la tâche.
-* `char *task_id` L'identifiant de la tâche associée à la tâche prête.
+`struct ready_task_key_t` Represents a ready task key used in the ready task queue (a binary search tree).
+* `unsigned long remaining_processing_time` The remaining processing time of the task.
+* `char *task_id` The identifier of the task associated with the ready task.
 ***
-`struct schedule_t` Représente le calendrier global des tâches sur les machines parallèles.
-* `struct list_t **schedule` Un tableau de pointeurs vers la structure list_t, où chaque élément représente la programmation d'une machine.
-* `int num_machines` Le nombre de machines disponibles.
+`struct schedule_t` Represents the global schedule of tasks on parallel machines.
+* `struct list_t **schedule` An array of pointers to the list_t structure, where each element represents the schedule of a machine.
+* `int num_machines` The number of available machines.
 
-`struct schedule_node_t` Représente un nœud dans le planning d'une machine.
-* `struct task_t *task` Pointeur sur la tâche assignée à ce nœud.
-* `unsigned long begin_time` L'heure à laquelle la tâche commence à être exécutée.
-* `unsigned long end_time` Heure de fin d'exécution de la tâche.
+`struct schedule_node_t` Represents a node in a machine's schedule.
+* `struct task_t *task` Pointer to the task assigned to this node.
+* `unsigned long begin_time` The time at which the task starts execution.
+* `unsigned long end_time` Time when the task finishes execution.
 ***
-`struct list_t` Structure de liste doublement chainées utilisée pour représenter une instance du problème d'ordonnancement et pour stocker les horaires des machines.
-* `struct list_node_t * head, * tail` Pointeurs vers la tête et la queue de la liste.
-* `int numelm` Le nombre d'éléments de la liste.
-* `void (*viewData)(const void * data)` Un pointeur de fonction vers une fonction qui imprime les données stockées dans les nœuds de la liste.
-* `void (*freeData)(void * data)` Un pointeur de fonction vers une fonction qui libère les données stockées dans les nœuds de la liste.
+`struct list_t` Doubly linked list structure used to represent an instance of the scheduling problem and to store machine schedules.
+* `struct list_node_t * head, * tail` Pointers to the head and tail of the list.
+* `int numelm` The number of elements in the list.
+* `void (*viewData)(const void * data)` A function pointer to a function that prints the data stored in the list nodes.
+* `void (*freeData)(void * data)` A function pointer to a function that frees the data stored in the list nodes.
 
-`struct list_node_t` Représente un nœud dans une liste doublement chainées. Il est utilisé dans le cadre de la structure de données struct list_t.
-* `void *data` Un pointeur sur les données stockées dans le nœud de liste. Il peut s'agir d'un pointeur sur l'une des structures mentionnées précédemment, comme task_t ou schedule_node_t.
-* `struct list_node_t *successor` Pointeur sur le nœud suivant de la liste.
-* `struct list_node_t *predecessor` Pointeur sur le nœud précédent de la liste.
+`struct list_node_t` Represents a node in a doubly linked list. It is used as part of the struct list_t data structure.
+* `void *data` A pointer to the data stored in the list node. It can be a pointer to any of the previously mentioned structures, like task_t or schedule_node_t.
+* `struct list_node_t *successor` Pointer to the next node in the list.
+* `struct list_node_t *predecessor` Pointer to the previous node in the list.
 ***
-`struct tree_t` Un arbre de recherche binaire (équilibré ou déséquilibré) utilisé pour représenter la file d'attente des événements et la file d'attente des tâches prêtes.
-* `struct tree_node_t * root` Pointeur sur la racine de l'arbre.
-* `int numelm` Le nombre d'éléments dans l'arbre.
-* `int (*preceed)(const void * a, const void * b)` Un pointeur de fonction vers une fonction qui compare deux éléments de l'arbre. Elle renvoie 1 si le premier élément précède le second, 0 sinon.
-* `void (*viewKey)(const void * key)` Un pointeur de fonction vers une fonction qui imprime la clé stockée dans les nœuds de l'arbre.
-* `void (*viewData)(const void * data)` Un pointeur de fonction vers une fonction qui imprime les données stockées dans les nœuds de l'arbre.
-* `void (*freeKey)(void * key)` Un pointeur de fonction vers une fonction qui libère la clé stockée dans les nœuds de l'arbre.
-* `void (*freeData)(void * data)` Un pointeur de fonction vers une fonction qui libère les données stockées dans les nœuds de l'arbre.
-* `int balanced` Un drapeau indiquant si l'arbre est équilibré ou non.
+`struct tree_t` A binary search tree (balanced or unbalanced) used to represent the event queue and the ready task queue.
+* `struct tree_node_t * root` Pointer to the root of the tree.
+* `int numelm` The number of elements in the tree.
+* `int (*preceed)(const void * a, const void * b)` A function pointer to a function that compares two elements of the tree. It returns 1 if the first element precedes the second, 0 otherwise.
+* `void (*viewKey)(const void * key)` A function pointer to a function that prints the key stored in the tree nodes.
+* `void (*viewData)(const void * data)` A function pointer to a function that prints the data stored in the tree nodes.
+* `void (*freeKey)(void * key)` A function pointer to a function that frees the key stored in the tree nodes.
+* `void (*freeData)(void * data)`  A function pointer to a function that frees the data stored in the tree nodes.
+* `int balanced` A flag indicating whether the tree is balanced or not.
 
-`struct tree_node_t` Représente un nœud dans un arbre de recherche binaire. Il est utilisé dans le cadre de la structure de données struct tree_t.
-* `void *key` Pointeur sur la clé utilisée pour trier les nœuds de l'arbre. Il peut s'agir d'un pointeur sur n'importe quelle structure de clé, telle que event_key_t ou ready_task_key_t.
-* `void *data` Un pointeur sur les données stockées dans le nœud de l'arbre. Il peut s'agir d'un pointeur sur l'une des structures mentionnées précédemment, comme task_t ou schedule_node_t.
-* `int bfactor` Le facteur d'équilibre du nœud. Il est utilisé dans les arbres de recherche binaires équilibrés (arbres AVL) pour maintenir l'équilibre pendant les opérations d'insertion et de suppression.
-* `struct tree_node_t *left` Un pointeur sur le nœud gauche de l'arbre.
-* `struct tree_node_t *right` Un pointeur sur le nœud droit de l'arbre.
+`struct tree_node_t` Represents a node in a binary search tree. It is used as part of the struct tree_t data structure.
+* `void *key` Pointer to the key used to sort the tree nodes. It can be a pointer to any key structure, such as event_key_t or ready_task_key_t.
+* `void *data` A pointer to the data stored in the tree node. It can be a pointer to any of the previously mentioned structures, like task_t or schedule_node_t.
+* `int bfactor` The balance factor of the node. It is used in balanced binary search trees (AVL trees) to maintain balance during insert and delete operations.
+* `struct tree_node_t *left` A pointer to the left node of the tree.
+* `struct tree_node_t *right` A pointer to the right node of the tree.
 ***
-`struct event_key_t` Représente une clé d'événement utilisée dans la file d'attente des événements (un arbre de recherche binaire).
-* `int event_type` Le type d'événement (0 pour le lancement d'une tâche, 1 pour la fin d'une tâche).
-* `unsigned long event_time` L'heure de l'événement.
-* `unsigned long processing_time` Le temps de traitement de la tâche associée à l'événement.
-* `char *task_id` L'identifiant de la tâche associée à l'événement.
-* `int machine` La machine associée à l'événement (pour les événements de fin de tâche).
+`struct event_key_t` Represents an event key used in the event queue (a binary search tree).
+* `int event_type` The type of event (0 for task launch, 1 for task completion).
+* `unsigned long event_time` The time of the event.
+* `unsigned long processing_time` The processing time of the task associated with the event.
+* `char *task_id` The identifier of the task associated with the event.
+* `int machine` The machine associated with the event (for task completion events).
 
 ## 📘 License
-Université de Lorraine - UFR Mathématiques, informatique, mécanique (MIM) - 2023
+University of Lorraine - Faculty of Mathematics, Computer Science, Mechanics (MIM) - 2023
