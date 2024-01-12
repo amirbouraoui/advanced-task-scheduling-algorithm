@@ -1,0 +1,34 @@
+package application;
+
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+
+import com.flexganttfx.model.ActivityRef;
+import com.flexganttfx.view.graphics.ActivityBounds;
+import com.flexganttfx.view.graphics.GraphicsBase;
+import com.flexganttfx.view.graphics.renderer.ActivityBarRenderer;
+import com.flexganttfx.view.util.Position;
+
+class CustomTaskRenderer extends ActivityBarRenderer<Task> {
+    public CustomTaskRenderer(GraphicsBase<?> graphics, String name) {
+        super(graphics, name);
+        setCornersRounded(false);
+        //setBarHeight(24);
+    }
+
+    @Override
+    protected ActivityBounds drawActivity(ActivityRef<Task> activityRef, Position position, GraphicsContext gc, double x, double y, double w, double h, boolean selected, boolean hover, boolean highlighted, boolean pressed) {
+        Task task = activityRef.getActivity();
+        Color taskColor = task.getColor() != null ? task.getColor() : Color.BLUE;
+        // Opacity
+        //taskColor = taskColor.deriveColor(0, 1, 1, 0.8);
+        setFill(taskColor);
+        //gc.fillRect(x, y, w, h);
+
+        // Draw the stroke only on the left and right sides
+        //gc.strokeLine(0, 0, 0, 0);
+
+        
+        return super.drawActivity(activityRef, position, gc, x, y, w, h, selected, hover, highlighted, pressed);
+    }
+}

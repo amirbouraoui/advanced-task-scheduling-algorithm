@@ -1,0 +1,174 @@
+/* ========== EXECUTE BTN ========== */
+.execute-button {
+    -fx-background-color: #000000;
+    -fx-border-color: #000000;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "ITC Avant Garde Std Bk", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: 400;
+    -fx-padding: 12px 40px;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 1), 4, 0.0, 4, 4);
+}
+
+.execute-button:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 1), 4, 0.0, 4, 4),
+                dropshadow(three-pass-box, rgba(0, 0, 0, 1), 4, 0.0, 4, 4);
+	-fx-background-color: #363636;
+	-fx-cursor: hand;
+}
+
+.execute-button:pressed {
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 1), 2, 0.0, 2, 2),
+                dropshadow(three-pass-box, rgba(0, 0, 0, 1), 2, 0.0, 2, 2);
+    -fx-translate-x: 2px;
+    -fx-translate-y: 2px;
+}
+
+/* ========== RADIO BTN ========== */
+
+.material-radio-button {
+    -fx-padding: 10px;
+    -fx-font-family: "Roboto", Arial, sans-serif;
+}
+
+.material-radio-button .radio {
+    -fx-min-width: 20px;
+    -fx-min-height: 20px;
+    -fx-max-width: 20px;
+    -fx-max-height: 20px;
+    -fx-background-color: white;
+    -fx-border-color: #bdbdbd;
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+    -fx-border-width: 2px;
+    -fx-padding: 4px;
+}
+
+.material-radio-button:hover {
+	-fx-cursor: hand;
+}
+
+.material-radio-button:selected .radio {
+    -fx-border-color: #2196f3;
+}
+
+.material-radio-button .radio:pressed, .material-radio-button:selected .radio:pressed {
+    -fx-border-color: #1976d2;
+}
+
+.material-radio-button .dot {
+    -fx-min-width: 10px;
+    -fx-min-height: 10px;
+    -fx-max-width: 10px;
+    -fx-max-height: 10px;
+    -fx-background-color: #2196f3;
+    -fx-background-radius: 50%;
+    -fx-opacity: 0;
+    -fx-translate-y: -1px;
+}
+
+.material-radio-button:selected .dot {
+    -fx-opacity: 1;
+}
+
+.material-radio-button .label {
+    -fx-text-fill: #424242;
+}
+
+/* ========== COMBOBOX ========== */
+
+.material-combo-box {
+    -fx-font-family: "Roboto", Arial, sans-serif;
+    -fx-padding: 4px 10px 4px 0;
+    -fx-background-color: white;
+    -fx-border-color: #bdbdbd;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-border-width: 1px;
+}
+
+.material-combo-box .list-cell:hover  {
+    -fx-background-color: #e1f5fe;
+}
+
+.material-combo-box .list-cell {
+    -fx-padding: 4px 10px;
+}
+
+.material-combo-box .cell {
+    -fx-text-fill: #424242;
+}
+
+.material-combo-box .button {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.material-combo-box .arrow {
+    -fx-background-color: #757575;
+    -fx-padding: 5px 6px;
+    -fx-shape: "M0 0 L7 7 L14 0 Z";
+}
+
+.material-combo-box .arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.material-combo-box .context-menu {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.32), 4, 0.0, 0, 1);
+}
+
+/* ========== UPLOAD BTN ========== */
+.material-upload-button {
+    -fx-font-family: "Roboto", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #2196f3;
+    -fx-text-fill: white;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px 16px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.2), 2, 0.5, 0, 0.5);
+}
+
+.material-upload-button:hover {
+    -fx-background-color: #1976d2;
+    -fx-cursor: hand;
+}
+
+.material-upload-button:pressed {
+    -fx-background-color: #0d47a1;
+}
+
+/* ========== INPUT FIELD ========== */
+.material-text-field {
+    -fx-font-family: "Roboto", Arial, sans-serif;
+}
+/* ========== TOGGLE COLORING BTN ========== */
+._toggle_coloring_btn{
+	-fx-cursor: hand;
+	-fx-text-fill: #1976d2;
+	-fx-background-color: rgba(25, 118, 210, 0.08);
+	-fx-border-width: 1px;
+	-fx-border-color: rgba(0, 0, 0, 0.12);
+	-fx-border-style: solid;
+	-fx-pref-width: 110px;
+}
+
+._toggle_coloring_btn:hover{
+	-fx-background-color: rgba(25, 118, 210, 0.12);
+}
+
+.toggle_noselect_hover:hover{
+	-fx-background-color: rgba(0, 0, 0, 0.04)!important;
+}
+
+.toggle_select_hover:hover{
+	-fx-background-color: rgba(25, 118, 210, 0.12);
+}
+
+

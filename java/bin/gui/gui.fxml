@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="950.0" style="-fx-background-color: white;" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GuiController">
+   <children>
+      <StackPane prefHeight="551.0" prefWidth="950.0" />
+      <Circle fill="#008cff" layoutX="950.0" layoutY="-32.0" radius="109.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <RadioButton fx:id="pre" layoutX="767.0" layoutY="321.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="165.0" styleClass="material-radio-button" text="With Preemption">
+         <toggleGroup>
+            <ToggleGroup fx:id="preemption_group" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="767.0" layoutY="287.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="165.0" selected="true" styleClass="material-radio-button" text="Without Preemption" toggleGroup="$preemption_group" />
+      <Button fx:id="execute_button" layoutX="780.0" layoutY="458.0" mnemonicParsing="false" onAction="#execute_button_method" styleClass="execute-button" text="EXECUTE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="balance_combo" accessibleHelp="Choose balancing algorithm" layoutX="768.0" layoutY="238.0" prefHeight="35.0" prefWidth="165.0" promptText="Balanced" styleClass="material-combo-box" />
+      <Line endX="207.0" endY="474.0" layoutX="542.0" layoutY="76.0" startX="207.0" startY="-76.0" stroke="#bcbcbc" />
+      <AnchorPane fx:id="ganttChartContainer" prefHeight="550.0" prefWidth="751.0" />
+      <ImageView fitHeight="55.0" fitWidth="71.0" layoutX="876.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/scheduling_icon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="uploadButton" layoutX="786.0" layoutY="92.0" mnemonicParsing="false" onAction="#handleUploadClick" styleClass="material-upload-button" text="Upload Instance" />
+      <TextField fx:id="integerInput" accessibleHelp="Enter the number of machines (greater then 0):" layoutX="767.0" layoutY="166.0" prefHeight="35.0" prefWidth="165.0" promptText="Enter number of machines" styleClass="material-text-field" text="2" />
+      <Label layoutX="767.0" layoutY="149.0" prefHeight="17.0" prefWidth="165.0" text="Amount of machines:" />
+      <Label layoutX="768.0" layoutY="221.0" prefHeight="17.0" prefWidth="165.0" text="Tree Balancing Algorithm:" />
+      <ToggleButton fx:id="coloring_toggle_btn" disable="true" layoutX="795.0" layoutY="381.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="120.0" styleClass="_toggle_coloring_btn" text="Disable Coloring" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </ToggleButton>
+   </children>
+</Pane>

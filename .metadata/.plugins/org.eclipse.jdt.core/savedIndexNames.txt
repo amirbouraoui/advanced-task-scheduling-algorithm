@@ -1,0 +1,19 @@
+INDEX VERSION 1.132+/Users/amir/University/L2/Sem-2/projet-de-synthese/.metadata/.plugins/org.eclipse.jdt.core
+3180508637.index
+4250439157.index
+3108791427.index
+640053175.index
+1865797976.index
+3542442940.index
+1040779498.index
+2533819271.index
+4283589536.index
+3539517088.index
+3689772550.index
+889616245.index
+482159354.index
+2136567879.index
+2541446362.index
+2383640175.index
+3143109863.index
+2155373899.index

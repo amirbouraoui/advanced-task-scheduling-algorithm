@@ -1,0 +1,13 @@
+package app;
+
+public class Heritage {
+	private String info;
+	
+	public Heritage(String info) {
+		this.info = info;
+	}
+	
+	public String getInfo() {
+		return info;
+	}
+}	
