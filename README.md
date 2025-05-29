@@ -1,4 +1,4 @@
-![img](https://cdn.discordapp.com/attachments/485141053473685504/1224401999400009769/image.png?ex=66bf84b8&is=66be3338&hm=c6ff84ddf4cc232c7e7fae7bb59509cfecbb1e4f242374fc40a6a12eeeb946a1&)
+![img](https://i.imgur.com/qCZkvaq.png)
 
 # Synthesis Project [![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/amirbouraoui/advanced-task-scheduling-algorithm)
 > This project implements a scheduling algorithm for a set of tasks to be executed on several machines. The scheduling algorithm can handle non-preemptive and preemptive scheduling with an optional balancing of the binary search tree used to store the tasks.
